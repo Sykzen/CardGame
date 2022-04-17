@@ -15,7 +15,7 @@
             <div class="input-group mb-3">
               <span class="input-group-text bg-primary"><i class="fa-solid fa-user"></i>
               </span>
-              <input type="text" name="Pseudo" class="form-control" placeholder="Pseudo" />
+              <input type="text" id = "Pseudo" name="Pseudo" class="form-control" placeholder="Pseudo" required/>
             </div>
             <div class="input-group mb-3">
               <span class="input-group-text bg-primary"><i class="fa-solid fa-lock"></i>
@@ -23,10 +23,10 @@
               <input name="password" type="password" class="form-control" placeholder="password" />
             </div>
           </div>
-          <button class="btn btn-primary text-center mt-2" type="submit" name="button" value="login">
+          <button class="btn btn-primary text-center mt-2" type="submit" name="button" value="login" id="button">
             Déjà inscrit, se connecter
           </button>
-          <button class="btn btn-primary text-center mt-2" type="submit" name="button" value="register">
+          <button class="btn btn-primary text-center mt-2" type="submit" name="button" value="register" id="button1">
             S'inscrire et se connecter
           </button>
         </div>
@@ -39,3 +39,22 @@
     </div>
   </div>
 </div>
+
+<!-- On va stocker dans le localStorage le nom du joueur -->
+ <script> 
+    
+    const pseudo = document.getElementById("Pseudo");
+    const btn = document.getElementById("button");
+    const btn1 = document.getElementById("button1");
+    btn.onclick = function(){
+        const key = pseudo.values;
+        console.log(key);
+        localStorage.setItem("nom", pseudo.value);
+    }
+    btn1.onclick = function(){
+        const key = pseudo.values;
+        console.log(key);
+        localStorage.setItem("nom", pseudo.value);
+    }
+
+</script>

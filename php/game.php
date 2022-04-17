@@ -9,21 +9,24 @@
 <body class = "bg-success" style="background-color: darkgreen;
     background-size: cover;">
 
+    <div style= "position: absolute; bottom: 0;">
+        <?php include 'chat_.php';
+        ?>
+    </div>
     
     <div >
         <div class="container text-center">
-            <div id="tableDiv">
+            <div id="tableDiv" style = 'margin-top: 50px;'>
 
             </div>
 
         
         </div>
 
-        <?php include 'chat_.php';
-        ?>
-        
+       
+
         <!----on crée l'espace entre le tableau et les joueurs --->
-        <div style="margin-top:100px;"></div>
+        <div style="margin-top:150px;"></div>
         <!---Affichage des joueus et leurs scores--->
         <div class="container">
             <table class="table table-dark table-hover">

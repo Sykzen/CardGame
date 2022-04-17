@@ -1,9 +1,11 @@
+
 .main{
-	justify-content: center;
+	/*justify-content: center;
 	align-items: center;
-    position: absolute;
+*/  position: absolute;
     bottom: 0;
     width:300px;
+    margin-top: 500px;
     background-color: aliceblue;
     padding: 5px;
 }
@@ -14,9 +16,13 @@
     width: 300px;
     overflow: auto;
     max-height: 100px;
+    padding: 5px;
 
 }
 
 #chatbox{
     width: 220px;
+    
 }
+
+

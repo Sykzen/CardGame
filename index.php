@@ -28,7 +28,7 @@
           <div class="card">
             1 Vs 1
           </div>
-          <a href="game.php">
+          <a href="php/game.php">
       </div>
 
 

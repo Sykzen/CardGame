@@ -1,53 +1,35 @@
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/navbar.php'; ?>
+<?php include 'header.php';
+?>
 
 
 
 
 </head>
 
-<body>
+<body class = "bg-success" style="background-color: darkgreen;
+    background-size: cover;">
 
-    <div class="container">
-        <div>
-            <div id="tableDiv">
+    <div style= "position: absolute; bottom: 0;">
+        <?php include 'chat_.php';
+        ?>
+    </div>
+    
+    <div >
+        <div class="container text-center">
+            <div id="tableDiv" style = 'margin-top: 50px;'>
 
             </div>
-        </div>
-        <!----on crée l'espace entre le tableau et les joueurs --->
-        <div style="margin-top:100px;"></div>
-        <!---Affichage des joueus et leurs scores--->
-        <div class="container">
-            <table class="table table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">N°</th>
-                        <th scope="col">Joueurs</th>
-                        <th scope="col">Score</th>
-                        <th scope="col">Niveau</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>(getNom)</td>
-                        <td>(getScore)</td>
-                        <td>(getLvl)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Bot</td>
-                        <td>(getScore)</td>
-                        <td>∞</td>
-                    </tr>
 
-                </tbody>
-            </table>
+        
         </div>
-    </div>
 
-    <?php include 'includes/chat_.php';
-    ?>
+       
+
+        
+
+     
+
+<script src="../js/main.js"></script>
 
 
 </body>
@@ -127,8 +109,7 @@
 
 
 
-
-<!-------------------------------------------------------------------------------------------------------------------
+<!-- <!-------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------
 ---------------------------------------------------------
 ---------------------------------------------------------
@@ -143,7 +124,7 @@
 --------------------------------------------------------->
 
 
-<script>
+<!-- <script>
     $(function() {
 
         function shuffle(a) {
@@ -243,4 +224,4 @@
 
 
     });
-</script>
+</script>  -->

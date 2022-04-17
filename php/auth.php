@@ -2,7 +2,7 @@
 session_start();
 
 
-$jsonString = file_get_contents('../json/db_user.json');
+$jsonString = file_get_contents("../json/db_user.json");
 $data = json_decode($jsonString, true);
 if ($_POST["button"] == "login") {
     #Verifier si l'utilisateur existe
@@ -20,13 +20,13 @@ if ($_POST["button"] == "login") {
         echo ("Pseudo incorrect ou vous n'êtes pas inscrit");
     }
 } else {
-    #Si il est pas entrain de se connecter il  est entrain de s'inscrire
+    #Si il est pas entrain de se connecter il est entrain de s'inscrire
     if (isset($data[$_POST['Pseudo']])) {
         echo ("Pseudo déjà utilisé");
     } else {
         $data[$_POST['Pseudo']] = array("password" => $_POST['password'], "Ranking" => -1, "Score" => 0, "Nb_partie" => 0, "Level" => "Novice");
         $newJsonString = json_encode($data);
-        file_put_contents('../json/db_user.json', $newJsonString);
+        file_put_contents("../json/db_user.json", $newJsonString);
         echo "Inscription reussi";
         $_SESSION['Pseudo'] = $_POST['Pseudo'];
         header('Location: ../index.php');
