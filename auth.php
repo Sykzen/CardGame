@@ -1,5 +1,7 @@
-
 <?php
+session_start();
+
+
 $jsonString = file_get_contents('config/db_user.json');
 $data = json_decode($jsonString, true);
 if ($_POST["button"] == "login") {
@@ -8,6 +10,9 @@ if ($_POST["button"] == "login") {
         #Verifier si le mot de passe est correct
         if ($data[$_POST["Pseudo"]]["password"] == $_POST["password"]) {
             echo ("Vous êtes connecté");
+            $_SESSION['Pseudo'] = $_POST['Pseudo'];
+            print_r($_SESSION);
+            #header('Location: index.php');
         } else {
             echo ("Mot de passe incorrect");
         }
@@ -23,17 +28,11 @@ if ($_POST["button"] == "login") {
         $newJsonString = json_encode($data);
         file_put_contents('config/db_user.json', $newJsonString);
         echo "Inscription reussi";
+        $_SESSION['Pseudo'] = $_POST['Pseudo'];
+        header('Location: index.php');
     }
 }
 
 #check if the user is logged in
 if (isset($_SESSION['Pseudo'])) {
-    #if the user is logged in, redirect to the home page
-    header('Location: index.php');
 }
-
-#header('Location: ../templates/index.html');
-
-
-?>
-
