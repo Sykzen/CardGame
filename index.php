@@ -16,15 +16,21 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card">
-          Jouer contre un bot
-        </div>
+        <a href="gamebot.php">
+          <div class="card">
+            Jouer contre un bot
+          </div>
+        </a>
       </div>
+
       <div class="col">
-        <div class="card">
-          1 Vs 1
-        </div>
+        <a href="game.php">
+          <div class="card">
+            1 Vs 1
+          </div>
+          <a href="game.php">
       </div>
+
 
     </div>
   </div>

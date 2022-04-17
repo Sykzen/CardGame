@@ -2,9 +2,9 @@
 <script>
     sessionStorage.setItem(<?php # echo $_POST['nbjoueur']; 
                             ?>, "nb");
-</script>
-
--->
+                            </script>
+                            
+                            -->
 <?php include 'includes/header.php'; ?>
 <link rel="stylesheet" href="cscc/index.css" />
 <!-----------Navbar--------------->
