@@ -1,7 +1,9 @@
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/navbar.php'; ?>
+<?php include 'includes/header.php';
+?>
+<?php include 'includes/navbar.php';
+?>
 
-
+<link rel="stylesheet" href="cscc/chat.css" />
 
 
 </head>
@@ -18,17 +20,42 @@
         <div style="margin-top:100px;"></div>
         <!---Affichage des joueus et leurs scores--->
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    Joueur 1
-                </div>
-                <div class="col">
-                    Jour 2
-                </div>
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">N°</th>
+                        <th scope="col">Joueurs</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Niveau</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>(getNom)</td>
+                        <td>(getScore)</td>
+                        <td>(getLvl)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>(getNom)</td>
+                        <td>(getScore)</td>
+                        <td>(getLvl)</td>
+                    </tr>
 
-            </div>
+                </tbody>
+            </table>
         </div>
-    </div>
+        <div id='result'></div>
+
+        <div class='chatcontrols'>
+            <form method="post" onsubmit="return submitchat();">
+                <input type='text' name='chat' id='chatbox' autocomplete="off" required placeholder="RENTRER UN MESSAGE" />
+                <input type='submit' name='send' id='send' class='btn btn-send' value='Envoyer' />
+            </form>
+
+            <script src="script/chat.js"></script>
+        </div>
 
 
 

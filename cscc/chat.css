@@ -1,0 +1,21 @@
+.main {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    background-color: aliceblue;
+    padding: 5px;
+}
+
+#result {
+    background-color: rgb(168, 240, 237);
+    height: 20%;
+    width: 300px;
+    overflow: auto;
+    max-height: 100px;
+}
+
+#chatbox {
+    width: 220px;
+}

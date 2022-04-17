@@ -18,18 +18,33 @@
         <div style="margin-top:100px;"></div>
         <!---Affichage des joueus et leurs scores--->
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    Joueur 1
-                </div>
-                <div class="col">
-                    Bot
-                </div>
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">N°</th>
+                        <th scope="col">Joueurs</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Niveau</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>(getNom)</td>
+                        <td>(getScore)</td>
+                        <td>(getLvl)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Bot</td>
+                        <td>(getScore)</td>
+                        <td>∞</td>
+                    </tr>
 
-            </div>
+                </tbody>
+            </table>
         </div>
     </div>
-
 
 
 

@@ -1,4 +1,5 @@
 # CardGame
+
 Projet L3 info paris saclay
 
 ## Installation
@@ -11,7 +12,7 @@ Projet L3 info paris saclay
 
 ## Acknowledgements
 
-
 ## Reference
 
-https://github.com/robert-upwork/Laravel-MaterialUI-AdminPanel
+- https://www.archine.com/listing/carte-de-jeu-ben-10-extraterrestre-p-050-r/1428935 (img carte)
+- https://github.com/robert-upwork/Laravel-MaterialUI-AdminPanel (arborescence)
