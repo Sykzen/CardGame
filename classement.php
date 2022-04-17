@@ -114,8 +114,3 @@
   </div>
 
   <!--  NAVBAR conexion,classement des joueurs et profile-->
-
-
-  <?php
-  $jsonString = file_get_contents('db_user.json');
-  $data = json_decode($jsonString, true);
