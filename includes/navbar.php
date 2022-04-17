@@ -1,7 +1,8 @@
 <!--------------------------------------------------------------------------------------  Début Body ------------------------------------------------------------>
 <!--  NAVBAR conexion,classement des joueurs et profile-->
-<div class="bg-image" style="background-image: url('static/back.jpg'); height: 100vh">
-    <!-- img backgorund-->
+<!--<div class="bg-image" style="background-image: url('static/back.jpg'); height: 100vh">--->
+<div>
+    <!--- img backgorund--->
 
     <nav class="navbar navbar-expand-sm" style="background-color: #e3f2fd">
         <div class="container-fluid">

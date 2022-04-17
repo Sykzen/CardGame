@@ -3,14 +3,14 @@
 <?php include 'includes/navbar.php';
 ?>
 
-<link rel="stylesheet" href="cscc/chat.css" />
+
 
 
 </head>
 
 <body>
 
-    <div class="position-absolute top-50 start-50 translate-middle">
+    <div class="container">
         <div>
             <div id="tableDiv">
 
@@ -46,17 +46,10 @@
                 </tbody>
             </table>
         </div>
-        <div id='result'></div>
+    </div>
 
-        <div class='chatcontrols'>
-            <form method="post" onsubmit="return submitchat();">
-                <input type='text' name='chat' id='chatbox' autocomplete="off" required placeholder="RENTRER UN MESSAGE" />
-                <input type='submit' name='send' id='send' class='btn btn-send' value='Envoyer' />
-            </form>
-
-            <script src="script/chat.js"></script>
-        </div>
-
+    <?php include 'includes/chat_.php';
+    ?>
 
 
 
