@@ -1,4 +1,17 @@
 
+class Joueur{
+
+    constructor(nom, joue, score){
+        this.nom = localStorage.nom;
+        this.joue = joue;
+        this.score = score;
+    }
+}
+
+var joueurs = [];
+const joueur = new Joueur(localStorage.nom, false, 0);
+
+
 
 const divResultat = document.querySelector("#tableDiv");
 
@@ -15,6 +28,7 @@ var tabJeu = [
 //     [8,3,8,5],
 //     [6,6,4,7]
 // ];
+
 var tabResultat = genereTableauAleatoire();
 
 var oldSelection = [];
@@ -40,6 +54,8 @@ function afficherTableau(){
     divResultat.innerHTML = txt;
 };
 
+
+/*On recupere les differentes images*/
 function getImage(valeur){
     var imgTxt = "../static/cartes/";
     switch(valeur){
@@ -63,7 +79,7 @@ function getImage(valeur){
 return imgTxt;
 }
 
-
+/*On verifie que les deux cartes sont identiques*/
 function verif(bouton){
     if(ready){
         nbAffiche++;
@@ -74,6 +90,7 @@ function verif(bouton){
         if(nbAffiche > 1){
             ready = false;
             setTimeout(()=> {
+                /*si elles sont pas pareil alors on reretourne les cartes*/
                 if(tabJeu[ligne][colonne] !== tabResultat[oldSelection[0]][oldSelection[1]]){
                     tabJeu[ligne][colonne] = 0;
                     tabJeu[oldSelection[0]][oldSelection[1]] = 0;
@@ -88,6 +105,7 @@ function verif(bouton){
     }
 }
 
+/*On va generer le tableau de facon aléatoire en stockant le nombre d'image de chaque catégorie deja sorti*/
 function genereTableauAleatoire(){
     var tab = [];
     var nbImagePosition = [0,0,0,0,0,0,0,0];

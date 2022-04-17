@@ -2,8 +2,6 @@
 ?>
 
 
-
-
 </head>
 
 <body class = "bg-success" style="background-color: darkgreen;
@@ -22,8 +20,6 @@
 
         
         </div>
-
-       
 
         <!----on crée l'espace entre le tableau et les joueurs --->
         <div style="margin-top:150px;"></div>
