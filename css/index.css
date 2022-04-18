@@ -1,4 +1,5 @@
 /*On fait le fond des cartes multicolor et en animation*/
+
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
@@ -6,12 +7,12 @@
 }
 
  :root {
-    --card-height: 30vh;
-    --card-width: calc(var(--card-height) / 1.5);
+    --card-height: 10vh;
+    --card-width: calc(var(--card-height) / 0.2);
 }
 
 .card {
-    background: #cee1ec;
+    background: #db2bdb6c;
     width: var(--card-width);
     height: var(--card-height);
     padding: 3px;

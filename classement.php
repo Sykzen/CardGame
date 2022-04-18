@@ -1,32 +1,13 @@
-<?php include 'includes/header.php'; ?>
+<?php session_start(); ?>
+<?php include 'php/header.php'; ?>
 <!--------------------------------------------------------------------------------------  Début Body ------------------------------------------------------------>
 <!--  NAVBAR conexion,classement des joueurs et profile-->
 <!-- img backgorund-->
 
-<nav class="navbar navbar-expand-sm" style="background-color: #e3f2fd">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img src="static/brand.png" width="100" height="100" alt="" loading="lazy" /></a>
-    <button style="border-color: black" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span style="color: green" class="nabar-toggler-icon"><i class="bi bi-file-plus"></i></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<?php include 'php/navbar.php'; ?>
+<?php include 'php/modalauth.php'; ?>
 
-    </div>
-    </ul>
-    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#authModal">
-      Connexion
-    </button>
-
-    <a class="btn btn-outline-success" aria-current="page" href="profile.php">Profile</a>
-  </div>
-
-
-
-</nav>
-
-
-<div style="background-image: url('static/back.jpg');position:relative; 
+<div style="background-image: url('../static/back.jpg');position:relative; 
     height: 100vh;">
   <div class=container>
     <div class="col col-lg-2">
@@ -50,7 +31,7 @@
       </thead>
       <tbody>";
     #import data from json file
-    $jsonString = file_get_contents('config/db_user.json');
+    $jsonString = file_get_contents('json/db_user.json');
     $data = json_decode($jsonString, true);
     #sort data by score
     $sorted_score = array();

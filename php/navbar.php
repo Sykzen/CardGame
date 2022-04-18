@@ -27,7 +27,11 @@
                     #check if the user is connected
                     if (isset($_SESSION['Pseudo'])) {
                         #if the user is connected
-                        echo 'maria';
+                        echo '<b>Bonjour  ' . $_SESSION["Pseudo"] . '!' . '</b> ';
+                        echo '<a class="btn btn-outline-success" aria-current="page" href="profile.php">Profile</a>';
+                        echo '<a href="php/logout.php" ><button class=" btn btn-outline-danger" >
+            Déconnexion
+          </button></a>';
                     }
                     #if the user is not connected
 
@@ -40,7 +44,6 @@
 
                 </div>
 
-                <a class="btn btn-outline-success" aria-current="page" href="profile.php">Profile</a>
             </div>
     </div>
     </nav>

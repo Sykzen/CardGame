@@ -11,8 +11,8 @@ if ($_POST["button"] == "login") {
         if ($data[$_POST["Pseudo"]]["password"] == $_POST["password"]) {
             echo ("Vous êtes connecté");
             $_SESSION['Pseudo'] = $_POST['Pseudo'];
-            print_r($_SESSION);
-            #header('Location: index.php');
+            $_SESSION['Niveau'] = 'Novice';
+            header('Location: index.php');
         } else {
             echo ("Mot de passe incorrect");
         }
@@ -27,8 +27,9 @@ if ($_POST["button"] == "login") {
         $data[$_POST['Pseudo']] = array("password" => $_POST['password'], "Ranking" => -1, "Score" => 0, "Nb_partie" => 0, "Level" => "Novice");
         $newJsonString = json_encode($data);
         file_put_contents("../json/db_user.json", $newJsonString);
-        echo "Inscription reussi";
         $_SESSION['Pseudo'] = $_POST['Pseudo'];
+        $_SESSION['Niveau'] = 'Novice';
+
         header('Location: ../index.php');
     }
 }
