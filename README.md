@@ -1,10 +1,11 @@
 # CardGame
 
-Projet L3 info paris saclay
+Jeux de Carte de Mémoire multi-joueurs en Python.
 
 ## KIT
 
-<a href="https://www.flaticon.com/fr/icones-gratuites/php" title="php icônes">Php icônes créées par Freepik - Flaticon</a>
+<img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
+<img src="https://img.icons8.com/officel/16/000000/php-logo.png"/>
 
 ## Display
 
@@ -28,10 +29,11 @@ git clone https://github.com/Sykzen/CardGame.git (in your server)
 
 Open your browser and go to http://localhost/CardGame/index.php
 
+## Contributors
+
+- [Sykzen](https://github.com/Sykzen)
+- [Makduv](https://github.com/Makduv)
+
 ## Reference
 
 - https://github.com/robert-upwork/Laravel-MaterialUI-AdminPanel (arborescence)
-
-```
-
-```
