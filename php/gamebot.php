@@ -7,7 +7,7 @@
 
 </head>
 
-<body class="bg-success" style="background-color: darkgreen;
+<body class="bg-success" style="background: url(../static/back.jpg);
     background-size: cover;">
 
     <div style="position: absolute; bottom: 0;">
