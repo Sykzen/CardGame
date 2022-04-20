@@ -31,7 +31,7 @@
       </thead>
       <tbody>";
     #import data from json file
-    $jsonString = file_get_contents('json/db_user.json');
+    $jsonString = file_get_contents('secret/db_user.json');
     $data = json_decode($jsonString, true);
     #sort data by score
     $sorted_score = array();
