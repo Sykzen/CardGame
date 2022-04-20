@@ -12,7 +12,7 @@ if ($_POST["button"] == "login") {
             echo ("Vous êtes connecté");
             $_SESSION['Pseudo'] = $_POST['Pseudo'];
             $_SESSION['Niveau'] = 'Novice';
-            header('Location: index.php');
+            header('Location: ../index.php');
         } else {
             echo ("Mot de passe incorrect");
         }

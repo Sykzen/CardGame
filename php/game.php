@@ -3,6 +3,8 @@
 ?>
 
 
+
+
 </head>
 
 <body class="bg-success" style="background-color: darkgreen;
@@ -22,9 +24,11 @@
 
         </div>
 
+
         <!----on crée l'espace entre le tableau et les joueurs --->
         <div style="margin-top:150px;"></div>
         <!---Affichage des joueus et leurs scores--->
+        <p id="tour"></p>
         <div class="container">
             <table class="table table-dark table-hover">
                 <thead>
@@ -38,21 +42,42 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>(getNom)</td>
-                        <td>(getScore)</td>
-                        <td>(getLvl)</td>
+                        <?php
+                        #if user logged in
+                        if (isset($_SESSION['Pseudo'])) {
+                            echo '<td>' . $_SESSION['Pseudo'] . '</td>';
+                        } else {
+                            echo '<td>' . 'Anonyme' . '</td>';
+                        }
+                        ?>
+
+                        <td id="joueur2"></td>
+
+                        <?php
+                        #if user logged in
+                        if (isset($_SESSION['Niveau'])) {
+                            echo '<td>' . $_SESSION['Niveau'] . '</td>';
+                        } else {
+                            echo '<td>' . 'Anonyme' . '</td>';
+                        }
+                        ?>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>(getNom)</td>
-                        <td>(getScore)</td>
-                        <td>(getLvl)</td>
+                        <td>BOT</td>
+                        <!---on affiche le score du bot--->
+
+                        <td id="joueur1">
+
+                        </td>
+                        <td>-</td>
                     </tr>
 
                 </tbody>
             </table>
         </div>
     </div>
+
 
 
 
