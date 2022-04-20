@@ -2,9 +2,21 @@
 <?php include 'header.php';
 ?>
 
+<?php
+$players = file_get_contents('../players.txt');
+$players_ = explode("-", $players);
+$players1 =  $players_[0];
+$players2 =  $players_[1];
 
 
 
+
+
+
+?>
+<script>
+
+</script>
 </head>
 
 <body class="bg-success" style="background-color: darkgreen;
@@ -42,35 +54,31 @@
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <?php
-                        #if user logged in
-                        if (isset($_SESSION['Pseudo'])) {
-                            echo '<td>' . $_SESSION['Pseudo'] . '</td>';
-                        } else {
-                            echo '<td>' . 'Anonyme' . '</td>';
-                        }
-                        ?>
+                        <td> <?php
+                                echo $players1;
+                                ?>
+                        </td>
+                        <td id="score1">
+                            <div id='joueur'></div>
+                        </td>
+                        <td>
+                            Novice</td>
 
-                        <td id="joueur2"></td>
 
-                        <?php
-                        #if user logged in
-                        if (isset($_SESSION['Niveau'])) {
-                            echo '<td>' . $_SESSION['Niveau'] . '</td>';
-                        } else {
-                            echo '<td>' . 'Anonyme' . '</td>';
-                        }
-                        ?>
+
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>BOT</td>
+                        <td><?php
+                            echo $players2;
+                            ?></td>
                         <!---on affiche le score du bot--->
 
-                        <td id="joueur1">
+                        <td id="joueur2">
 
                         </td>
-                        <td>-</td>
+                        <td>Novice</td>
                     </tr>
 
                 </tbody>
@@ -82,7 +90,9 @@
 
 
     <script src="../js/main.js"></script>
+    <script>
 
+    </script>
 
 </body>
 

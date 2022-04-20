@@ -13,11 +13,8 @@ const joueur = new Joueur(localStorage.nom, false, 0);
 
 
 const divResultat = document.querySelector("#tableDiv");
-const score_joueur1 = document.querySelector("#joueur1");
-const score_joueur2 = document.querySelector("#joueur2");
-tour = document.querySelector("#tour");
 
-tour.innerHTML = "<div class='align-center alert alert-success' style='text-align:center;'>C'est le tour du joueur";
+
 
 var tabJeu = [
     [0, 0, 0, 0],
@@ -93,10 +90,8 @@ function getImage(valeur) {
 }
 
 /*score_joueur2.innerHTML=joueur.score; */
-score_joueur1.innerHTML = 0;
-score_joueur2.innerHTML = 0;
-tour_nb = 1;
-tour.innerHTML = "<div class='align-center alert alert-success' style='text-align:center;'>C'est le tour du joueur " + tour_nb;
+var score_joueur1 = 0;
+var score_joueur2 = 0;
 
 /*On verifie que les deux cartes sont identiques*/
 function verif(bouton) {
@@ -115,16 +110,22 @@ function verif(bouton) {
                     tabJeu[ligne][colonne] = 0;
                     tabJeu[oldSelection[0]][oldSelection[1]] = 0;
                 } else {
-                    /*si elles sont pareil alors on incremente le score du joueur*/
-                    if (tour_nb == 1) {
 
-                        score_joueur2.innerHTML++;
-                    } else {
-                        score_joueur1.innerHTML++;
-                    }
+                    score_joueur1 = score_joueur1 + 1;
+
+                    $.ajax({
+                        url: '../make.php',
+                        data: {
+                            sk1: score_joueur1
+                        },
+                        method: 'post',
+                        success: function(data) {
+                            $('#joueur').html("7");
+                        }
+                    })
+
+
                 }
-                tour_nb = tour_nb == 1 ? 2 : 1;
-                tour.innerHTML = "<div class='align-center alert alert-success' style='text-align:center;'>C'est le tour du joueur " + tour_nb;
 
                 afficherTableau();
                 ready = true;

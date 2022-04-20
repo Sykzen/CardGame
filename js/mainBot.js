@@ -97,11 +97,28 @@ score_joueur1.innerHTML = 0;
 score_joueur2.innerHTML = 0;
 tour_nb = 1;
 tour.innerHTML = "<div class='align-center alert alert-success' style='text-align:center;'>C'est le tour du joueur " + tour_nb;
-var choix = [[0,0],[0,1],[0,2],[0,3],[1,0],[1,1],[1,2],[1,3],[2,0],[2,1],[2,2],[2,3],[3,0],[3,1],[3,2],[3,3]];
+var choix = [
+    [0, 0],
+    [0, 1],
+    [0, 2],
+    [0, 3],
+    [1, 0],
+    [1, 1],
+    [1, 2],
+    [1, 3],
+    [2, 0],
+    [2, 1],
+    [2, 2],
+    [2, 3],
+    [3, 0],
+    [3, 1],
+    [3, 2],
+    [3, 3]
+];
 
-function retrouverIndice(tab, ligne, colonne){
-    for(var i = 0; i< tab.length; i++){
-        if(tab[i][0] === parseInt(ligne) && tab[i][1] === parseInt(colonne)){
+function retrouverIndice(tab, ligne, colonne) {
+    for (var i = 0; i < tab.length; i++) {
+        if (tab[i][0] === parseInt(ligne) && tab[i][1] === parseInt(colonne)) {
             return i;
         }
     }
@@ -112,12 +129,12 @@ function verif(bouton) {
 
     if (ready) {
         nbAffiche++;
-        if(tour_nb == 1){
+        if (tour_nb == 1) {
             var ligne = bouton.substr(0, 1);
             var colonne = bouton.substr(2, 1);
-            var ensemble = retrouverIndice(choix, ligne, colonne);            
+            var ensemble = retrouverIndice(choix, ligne, colonne);
         } else {
-            var ensemble = Math.floor(Math.random() * choix.length); 
+            var ensemble = Math.floor(Math.random() * choix.length);
             var ligne = choix[ensemble][0];
             var colonne = choix[ensemble][1];
         }
@@ -133,19 +150,19 @@ function verif(bouton) {
                     tabJeu[oldSelection[0]][oldSelection[1]] = 0;
                     tour_nb = tour_nb == 1 ? 2 : 1;
                 } else {
-                    if(choix.length == 2){
-                        if(score_joueur2.innerHTML > score_joueur1.innerHTML){
+                    if (choix.length == 2) {
+                        if (score_joueur2.innerHTML > score_joueur1.innerHTML) {
                             window.alert("Vous avez perdu");
-                        } else if (score_joueur2.innerHTML < score_joueur1.innerHTML){
+                        } else if (score_joueur2.innerHTML < score_joueur1.innerHTML) {
                             window.alert("Vous avez gagné");
                         } else {
-                             window.alert("Egalité");
+                            window.alert("Egalité");
                         }
-                        
+
                     } else {
                         /* on enleve dans le tableau choix les deux retournées ca marche quand cesdt le bot mais pas quad cest l'humain*/
-                        var enleve = choix.splice(ensemble,1);
-                        enleve = choix.splice(retrouverIndice(choix, oldSelection[0], oldSelection[1]),1);
+                        var enleve = choix.splice(ensemble, 1);
+                        enleve = choix.splice(retrouverIndice(choix, oldSelection[0], oldSelection[1]), 1);
                         // console.log(colonneDispo);
                         /*si elles sont pareil alors on incremente le score du joueur*/
                         if (tour_nb == 1) {
@@ -153,12 +170,12 @@ function verif(bouton) {
                             console.log(score_joueur2.innerHTML);
                         } else {
                             score_joueur1.innerHTML++;
-                             console.log(score_joueur1.innerHTML);
+                            console.log(score_joueur1.innerHTML);
                         }
                     }
-                    
+
                 }
-               
+
                 tour.innerHTML = "<div class='align-center alert alert-success' style='text-align:center;'>C'est le tour du joueur " + tour_nb;
 
                 afficherTableau();
