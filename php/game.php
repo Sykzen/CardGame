@@ -40,14 +40,15 @@ $players2 =  $players_[1];
         <!----on crée l'espace entre le tableau et les joueurs --->
         <div style="margin-top:150px;"></div>
         <!---Affichage des joueus et leurs scores--->
-        <p id="tour"></p>
+        <div class='align-center alert alert-success' style='text-align:center;'>Mon score est de : <span id='joueur'></span>
+        </div>
+
         <div class="container">
             <table class="table table-dark table-hover">
                 <thead>
                     <tr>
                         <th scope="col">N°</th>
                         <th scope="col">Joueurs</th>
-                        <th scope="col">Score</th>
                         <th scope="col">Niveau</th>
                     </tr>
                 </thead>
@@ -58,9 +59,7 @@ $players2 =  $players_[1];
                                 echo $players1;
                                 ?>
                         </td>
-                        <td id="score1">
-                            <div id='joueur'></div>
-                        </td>
+
                         <td>
                             Novice</td>
 
@@ -75,9 +74,6 @@ $players2 =  $players_[1];
                             ?></td>
                         <!---on affiche le score du bot--->
 
-                        <td id="joueur2">
-
-                        </td>
                         <td>Novice</td>
                     </tr>
 

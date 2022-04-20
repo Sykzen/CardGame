@@ -49,7 +49,7 @@
 
         if ($value == $data[$key2]['Score']) {
           echo "<tr class=" . $ar_color[$rand_color] . ">
-            <th scope='row'>" . $key + 1 . " </th>
+            <th scope='row'>" . $key . " </th>
             <td>" . $key2 . "</td>
             <td>" . $data[$key2]["Score"] . "</td>
             <td>" . $data[$key2]["Level"] . "</td>

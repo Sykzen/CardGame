@@ -166,3 +166,46 @@
     border: 1px solid #e67e22;
     color: #e67e22;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+.messagepredefini {
+    width: 500px;
+    height: auto;
+    background-color: #e1e4e3;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: -1px 1px 4px 1px #838595;
+    padding: 10px;
+}
+
+.titre3 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 25px;
+    color: #566a66;
+    border-bottom: 1px solid #fff;
+    text-shadow: 0px 0px 2px #7c7d82;
+    text-transform: uppercase;
+}
+
+.messagepredefini>h {
+    font-size: 14px;
+    font-variant: small-caps;
+    color: #9f6d68;
+    letter-spacing: 3px;
+    transition: 1s;
+}
+
+.messagepredefini>h:hover {
+    letter-spacing: 5px;
+}
+
+.texte1 {
+    box-shadow: -1px 2px 10px 3px #c4c0c7 inset;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 12px;
+    margin: 10px;
+    height: auto;
+    padding: 20px;
+    background-color: #d6d1d4;
+    color: #5b706a;
+}

@@ -32,22 +32,35 @@
     </div>
 
 
+    <div style="margin-left:400px;" class="messagepredefini">
+        <div class="titre3">Réglement</div>
+        <h>Memory</h>
+        <div class="texte1">
+            <left>
+                <p style="font-size:20px;">Chaque joueur dispose de son propre tableau de jeux</br>
+                    -chaque match de carte rapportera un points </br>
+                    -Le premier joueur ayant fini la partie gagne 10 points</br>
+                    -Le joueur ayant le plus de points gagne la partie</br>
+                </p>
+            </left>
+        </div>
+    </div>
+    <br />
+    <div>
+        <!-- Boutton lancer la partie -->
+        <a href="php/game.php"> <button style="margin-top:150px;text-align:center;" class="position-absolute top-50 start-50 btn btn-success"> Lancer la partie</button></a>
 
-</div>
-<!-- Boutton lancer la partie -->
-<a href="php/game.php"> <button style="text-align:center;" class="position-absolute top-50 start-50 btn btn-success"> Lancer la partie</button></a>
 
-
-<script>
-    var nom = localStorage.nom;
-    $.ajax({
-        url: 'salle.php',
-        data: {
-            username: nom
-        },
-        method: 'post',
-        success: function(data) {
-            $('#joueur').html(data);
-        }
-    })
-</script>
+        <script>
+            var nom = localStorage.nom;
+            $.ajax({
+                url: 'salle.php',
+                data: {
+                    username: nom
+                },
+                method: 'post',
+                success: function(data) {
+                    $('#joueur').html(data);
+                }
+            })
+        </script>

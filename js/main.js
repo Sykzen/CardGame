@@ -120,7 +120,7 @@ function verif(bouton) {
                         },
                         method: 'post',
                         success: function(data) {
-                            $('#joueur').html("7");
+                            $('#joueur').html(score_joueur1);
                         }
                     })
 

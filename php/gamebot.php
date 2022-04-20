@@ -11,8 +11,7 @@
     background-size: cover;">
 
     <div style="position: absolute; bottom: 0;">
-        <?php include 'chat_.php';
-        ?>
+
     </div>
 
     <div>
