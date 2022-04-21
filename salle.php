@@ -2,7 +2,7 @@
 session_start();
 $nb = 0;
 
-// Code to save and send chat
+// On va enregistrer les joueurs dans un des databases
 $chat = fopen("players.txt", "a");
 $data = "<b>" . $_POST['username'] . '- </b> ';
 fwrite($chat, $data);
@@ -15,7 +15,7 @@ fclose($chat);
 
 $players = file_get_contents('players.txt');
 $players_ = explode("-", $players);
-#count the length of the array
+#On va compter combien il y a de joueurs
 $nb = count($players_);
 if ($nb > 3) {
     $chat = fopen("players.txt", "w");

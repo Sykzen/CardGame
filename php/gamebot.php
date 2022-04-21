@@ -80,7 +80,7 @@
 
 
 
-    <script src="../js/mainBOT.js"></script>
+    <script src="../js/mainBot.js"></script>
 
 
 </body>
