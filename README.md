@@ -1,6 +1,6 @@
 # CardGame
 
-Jeux de Carte de Mémoire multi-joueurs en Python.
+Jeux de Carte de Mémoire multi-joueurs
 
 ## KIT
 
