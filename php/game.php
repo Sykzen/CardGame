@@ -2,6 +2,7 @@
 <?php include 'header.php';
 ?>
 
+
 <?php
 $players = file_get_contents('../players.txt');
 $players_ = explode("-", $players);
