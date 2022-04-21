@@ -17,10 +17,4 @@ if (isset($_POST['ajaxsend']) && $_POST['ajaxsend'] == true) {
 	$chat = fopen("../chatdata.txt", "r");
 	echo fread($chat, filesize("../chatdata.txt"));
 	fclose($chat);
-} else if (isset($_POST['ajaxclear']) && $_POST['ajaxclear'] == true) {
-	// Code to clear chat history
-	$chat = fopen("../chatdata.txt", "w");
-	$data = "<b>" . $_POST['username'] . '</b> cleared chat<br>';
-	fwrite($chat, $data);
-	fclose($chat);
-}
+} 

@@ -48,7 +48,7 @@
     <br />
     <div>
         <!-- Boutton lancer la partie -->
-        <a href="php/game.php"> <button style="margin-top:150px;text-align:center;" class="position-absolute top-50 start-50 btn btn-success"> Lancer la partie</button></a>
+        <a href="php/game.php"> <button style="margin-top:350px;text-align:center;" class="position-absolute top-50 start-50 btn btn-success"> Lancer la partie</button></a>
 
 
         <script>

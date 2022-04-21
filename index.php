@@ -16,7 +16,7 @@
 
 
   <?php
-  #if user logged in
+  #Si l'utilisateur est connecté il peut acceder aux deux type de jeu
   if (isset($_SESSION['Pseudo'])) {
     echo '<div class="container">
           <div class="row">
@@ -34,7 +34,7 @@
                         Jouer solo
                 </div>
          </a>';
-  } else {
+  } else { #Sinon il n'a accès qu'au mode solo
     echo '<div class="alert alert-danger" role="alert">
           Vous devriez être connecté pour jouer au mode 1V1
         </div>

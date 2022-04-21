@@ -1,6 +1,5 @@
 var nom = localStorage.nom;
 // on soumet chaque message 
-// Javascript function to submit new chat entered by user
 function submitchat() {
     if ($('#chat').val() == '' || $('#chatbox').val() == ' ') return false;
     $.ajax({
@@ -8,8 +7,8 @@ function submitchat() {
         data: { chat: $('#chatbox').val(), ajaxsend: true, username: nom },
         method: 'post',
         success: function(data) {
-            $('#result').html(data); // Get the chat records and add it to result div
-            $('#chatbox').val(''); //Clear chat box after successful submition
+            $('#result').html(data); 
+            $('#chatbox').val(''); //efface l'espace d'ecriture après envoi
 
             document.getElementById('result').scrollTop = document.getElementById('result').scrollHeight; // Bring the scrollbar to bottom of the chat resultbox in case of long chatbox
         }
@@ -17,7 +16,7 @@ function submitchat() {
     return false;
 };
 
-// Function to continously check the some has submitted any new chat
+// actualise le chat
 setInterval(function() {
     $.ajax({
         url: '../php/chat.php',

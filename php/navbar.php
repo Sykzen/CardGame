@@ -24,16 +24,16 @@
                 </ul>
                 <div class="mr-3" style="margin-right:3rem;">
                     <?php
-                    #check if the user is connected
+                    #Verifie sur l'utilisateur est connecté
                     if (isset($_SESSION['Pseudo'])) {
-                        #if the user is connected
+                        #Si l'utlisateur est connecté on va lui addresser un message personnalisé, la possibilité de voir son profil ou de se deconnecter
                         echo '<b>Bonjour  ' . $_SESSION["Pseudo"] . '!' . '</b> ';
                         echo '<a class="btn btn-outline-success" aria-current="page" href="profile.php">Profile</a>';
                         echo '<a href="php/logout.php" ><button class=" btn btn-outline-danger" >
             Déconnexion
           </button></a>';
                     }
-                    #if the user is not connected
+                    #S'il n'est pas connecté on lui propose l'onglet connexion
 
                     else {
                         echo '<button class=" btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#authModal">

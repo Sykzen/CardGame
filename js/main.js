@@ -12,6 +12,7 @@ const joueur = new Joueur(localStorage.nom, false, 0);
 
 
 
+
 const divResultat = document.querySelector("#tableDiv");
 
 
@@ -95,7 +96,6 @@ var score_joueur2 = 0;
 
 /*On verifie que les deux cartes sont identiques*/
 function verif(bouton) {
-
     if (ready) {
         nbAffiche++;
         let ligne = bouton.substr(0, 1);
@@ -109,10 +109,13 @@ function verif(bouton) {
                 if (tabJeu[ligne][colonne] !== tabResultat[oldSelection[0]][oldSelection[1]]) {
                     tabJeu[ligne][colonne] = 0;
                     tabJeu[oldSelection[0]][oldSelection[1]] = 0;
+                    localStorage.setItem("score", score_joueur1);
+                    console.log(localStorage);
                 } else {
 
                     score_joueur1 = score_joueur1 + 1;
-
+                    localStorage.setItem("score", score_joueur1);
+                    console.log(localStorage);
                     $.ajax({
                         url: '../make.php',
                         data: {
@@ -121,11 +124,13 @@ function verif(bouton) {
                         method: 'post',
                         success: function(data) {
                             $('#joueur').html(score_joueur1);
+
                         }
                     })
 
 
                 }
+
 
                 afficherTableau();
                 ready = true;
@@ -162,3 +167,4 @@ function genereTableauAleatoire() {
 
     return tab;
 }
+
